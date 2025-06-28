@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "kazukireiwa";
+  src: url("./fonts/KazukiReiwa-Light.woff") format("woff"),
+}
+
+body{
+    font-family: 'kazukireiwa','Hannari','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+}
