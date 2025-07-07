@@ -1,8 +1,255 @@
 @font-face {
   font-family: "kazukireiwa";
-  src: url("./fonts/KazukiReiwa-Light.woff") format("woff"),
+  src: url("./fonts/KazukiReiwa-Light.woff") format("woff");
 }
 
-body{
-    font-family: 'kazukireiwa','Hannari','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+body {
+  font-family: 'Hannari', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', serif;
+  margin: 0;
+  background-color: #fffaf0;
+  color: #3e2f1c;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* header */
+header {
+  position: relative;
+  background-color: #f5deb3;
+  height: 100vh;
+  padding: 0 1.5rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header::before {
+  content:
+    "速報 新聞号外 情報掲載 新刊発行 見出し 記事発表 最新ニュース 全国版 夕刊 朝刊 "
+    "事件事故 報道特集 社説 広告特集 読者投稿 新聞紙面 政治 経済 社会文化 スポーツ "
+    "特集記事 連載コラム 天気予報 ニュース速報 電話投書 インタビュー ニュース写真 "
+    "紙面解説 特別企画 社会問題 解説記事 情報通信 報道自由 記者会見 社会面 文化面 "
+    "経済面 緊急速報 特報 天声人語 政策報道 読者の声 編集部から 新聞社 講演会 社会調査 "
+    "紙面再現 文字組み イベント案内 プレゼント広告 社会的責任 新聞文化 未来展望 "
+    "デジタル新聞 メディア論 情報発信 トップニュース 今週のスポーツ ホームランの記録"
+    "速報 新聞号外 情報掲載 新刊発行 見出し 記事発表 最新ニュース 全国版 夕刊 朝刊 "
+    "事件事故 報道特集 社説 広告特集 読者投稿 新聞紙面 政治 経済 社会文化 スポーツ "
+    "紙面解説 特別企画 社会問題 解説記事 情報通信 報道自由 記者会見 社会面 文化面 "
+    "経済面 緊急速報 特報 天声人語 政策報道 読者の声 編集部から 新聞社 講演会 社会調査 "
+    "紙面再現 文字組み イベント案内 プレゼント広告 社会的責任 新聞文化 未来展望 "
+    "デジタル新聞 メディア論 情報発信 トップニュース 今週のスポーツ ホームランの記録"
+    "速報 新聞号外 情報掲載 新刊発行 見出し 記事発表 最新ニュース 全国版 夕刊 朝刊 "
+    "事件事故 報道特集 社説 広告特集 読者投稿 新聞紙面 政治 経済 社会文化 スポーツ ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  width: 100vw;
+  height: 100vw;
+  font-size: 5vw;
+  font-weight: bold;
+  font-family: 'Yu Mincho', '游明朝体', serif;
+  color: rgba(92, 59, 30, 0.035);
+  line-height: 6.5vw;
+  white-space: normal;
+  overflow-wrap: break-word;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: 0.3em;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  header::before {
+    width: 100vh;
+    height: 100vh;
+    font-size: 5vh;
+    line-height: 6.5vh;
+    transform: translate(0%, -50%) rotate(-6deg); /* ここを忘れずに */
+  }
+}
+
+/* タイトル */
+h1 {
+  font-family: 'kazukireiwa', 'Hannari', serif;
+  font-size: 4.5rem;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+  color: #5c3b1e;
+  position: relative;
+  z-index: 1;
+}
+
+/* サブタイトル */
+.subtitle {
+  font-family: 'kazukireiwa', 'Hannari', serif;
+  font-size: 1.8rem;
+  text-align: right;
+  margin: 0;
+  color: #6b4e2a;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* main */
+main {
+  max-width: 900px;
+  margin: 3rem auto 5rem auto;
+  padding: 0 1.5rem;
+}
+
+/* セクションタイトル */
+h2 {
+  border-left: 5px solid #b22222;
+  padding-left: 0.75rem;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  color: #4b2c16;
+}
+
+/* 段落とリスト */
+p, li {
+  font-size: 1.1rem;
+}
+
+ul {
+  list-style: square;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* blockquote */
+blockquote {
+  font-style: italic;
+  background: #fdf6e3;
+  padding: 1rem;
+  border-left: 5px solid #b58863;
+  margin: 1rem 0;
+  color: #4b2c16;
+}
+
+/* footer */
+footer {
+  background-color: #f0e0c0;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #5a3c2d;
+  border-top: 2px solid #8b5e3c;
+}
+
+/* fadein アニメーション用 */
+.fadein {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* レスポンシブ調整 */
+
+/* スマホ・小画面 */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  header::before {
+    font-size: 6vw;
+    line-height: 9vw;
+    letter-spacing: 0.15em;
+    left: -8vw;
+    width: 130vw;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  main {
+    margin: 2rem 1rem 4rem 1rem;
+    max-width: 95%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+    border-left-width: 4px;
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+
+  blockquote {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+/* タブレットなど中画面 */
+@media (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+
+  header::before {
+    font-size: 5vw;
+    line-height: 7.5vw;
+    letter-spacing: 0.25em;
+    left: -6vw;
+    width: 125vw;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  main {
+    margin: 2.5rem 1.2rem 4.5rem 1.2rem;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    padding-left: 0.6rem;
+    border-left-width: 4.5px;
+  }
+
+  p, li {
+    font-size: 1.05rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.95rem;
+    padding: 1.1rem;
+  }
 }
